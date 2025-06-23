@@ -1,0 +1,34 @@
+POST http://localhost:5249/Message/receber
+Content-Type: application/json
+
+{
+  "sender": "user1",
+  "group": "grupo1",
+  "text": "Mensagem via RabbitMQ",
+  "sentTime": "2025-05-26T10:40:00Z"
+}
+
+###
+
+POST http://localhost:5249/Message/erro
+Content-Type: application/json
+
+{
+  "sender": "user1",
+  "group": "grupo1",
+  "text": "Mensagem com erro",
+  "sentTime": "2025-05-26T10:40:00Z",
+  "error": "Erro simulado"
+}
+
+###
+
+POST http://localhost:5249/Message/reenvio
+Content-Type: application/json
+
+{
+  "sender": "user1",
+  "group": "grupo1",
+  "text": "Mensagem para reenviar",
+  "sentTime": "2025-05-26T10:40:00Z"
+}

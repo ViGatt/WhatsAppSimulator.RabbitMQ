@@ -1,0 +1,27 @@
+# Define a base URL para facilitar
+@RabbitMQHost = http://localhost:5183
+
+### Enviar mensagem
+POST {{RabbitMQHost}}/Message/enviar
+Content-Type: application/json
+
+{
+  "sender": "João",
+  "group": "grupo1",
+  "text": "Olá mundo!",
+  "sentTime": "2025-05-20T16:54:15.289Z"
+}
+
+### Receber mensagens
+GET {{RabbitMQHost}}/Message/receber
+
+### Reenvio de mensagens (em desenvolvimento)
+POST {{RabbitMQHost}}/Message/reenvio
+Content-Type: application/json
+
+{
+  "sender": "João",
+  "group": "grupo1",
+  "text": "Mensagem para reenvio",
+  "sentTime": "2025-05-20T16:54:15.289Z"
+}

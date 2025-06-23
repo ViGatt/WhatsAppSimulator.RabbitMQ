@@ -1,0 +1,6 @@
+@WhatsAppSimulator.Common_HostAddress = http://localhost:5190
+
+GET {{WhatsAppSimulator.Common_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

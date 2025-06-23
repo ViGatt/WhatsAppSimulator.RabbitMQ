@@ -1,0 +1,9 @@
+POST http://localhost:5073/Message/receber
+Content-Type: application/json
+
+{
+  "sender": "user_publisher",
+  "group": "grupo1",
+  "text": "Mensagem enviada pelo Publisher",
+  "sentTime": "2025-05-26T10:40:00Z"
+}
